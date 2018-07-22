@@ -1,4 +1,7 @@
-import VueRouter from 'vue-router'
+import Vue from 'vue'
+import Router from 'vue-router'
+
+Vue.use(Router)
 
 const routes = [
   {
@@ -7,7 +10,8 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
+const router = new Router({
+  mode: 'history',
   routes
 })
 

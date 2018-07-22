@@ -1,6 +1,8 @@
 <template>
-  <section class="app">
+  <section id="app">
     <h1>{{ head }}</h1>
+
+    <router-view />
   </section>
 </template>
 

@@ -9,7 +9,7 @@ module.exports = {
   context: path.resolve(__dirname, '..'),
 
   entry: {
-    main: './src/app'
+    main: './src/app.js'
   },
 
   output: {
@@ -48,16 +48,5 @@ module.exports = {
 
   resolve: {
     extensions: ['.vue', '.js']
-  },
-
-  devServer: {
-    contentBase: '../dist',
-    port: 8081,
-    historyApiFallback: true,   // 支持单页应用，用 index.html 响应 404 请求，不会响应被代理的请求。
-    overlay: {    // 在网页中显示编译警告与错误
-      warnings: true,
-      errors: true
-    },
-    hot: true   // 开启模块热替换
   }
 }

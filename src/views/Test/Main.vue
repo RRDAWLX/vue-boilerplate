@@ -1,10 +1,21 @@
 <template>
-  <p class="test">vue test</p>
+  <div class="test">
+    <p>vue test</p>
+    <p>count: {{ count }}</p>
+  </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  name: 'test'
+  name: 'test',
+
+  computed: {
+    ...mapGetters([
+      'count'
+    ])
+  }
 }
 </script>
 
