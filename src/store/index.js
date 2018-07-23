@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 1
+    count: 0
   },
 
   getters: {

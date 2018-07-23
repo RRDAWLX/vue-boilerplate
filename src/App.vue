@@ -12,15 +12,15 @@ export default {
 
   data() {
     return {
-      head: 'Vue App'
+      head: 'My Vue App'
     }
   }
 }
 </script>
 
 <style>
-.app {
-  color: bule;
+#app {
+  color: blue;
 }
 </style>
 

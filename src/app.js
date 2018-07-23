@@ -1,10 +1,11 @@
+import 'babel-polyfill'
 import Vue from 'vue'
 import App from './App'
 // import { sync } from 'vuex-router-sync'
 import router from './router'
 import store from './store'
 
-const dev = (process.env.NODE_ENV !== 'production' ? true : false)
+const debug = (process.env.NODE_ENV !== 'production')
 
 // sync(store, router)
 
@@ -14,7 +15,7 @@ const app = new Vue({
   render: h => h(App)
 })
 
-if (dev) {
+if (debug) {
   console.log(app)
 }
 

@@ -26,7 +26,28 @@ module.exports = {
       },
 
       {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              'vue',
+              ['env', {
+                targets: {
+                  browsers: ['> 1%', 'last 2 versions',]
+                }
+              }],
+              'stage-3',
+            ],
+            plugins: ['syntax-dynamic-import',]
+          },
+        }
+      },
+
+      {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           'vue-style-loader',
           'css-loader',
@@ -37,7 +58,7 @@ module.exports = {
 
   plugins: [
     new VueLoaderPlugin(),
-    
+
     new webpack.HotModuleReplacementPlugin(),
 
     // 生成一个HTML文件
