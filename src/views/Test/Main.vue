@@ -19,9 +19,14 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .test {
+  display: flex;
   color: red;
+
+  p:last-child {
+    color: green;
+  }
 }
 </style>
 

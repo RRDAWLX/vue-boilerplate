@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 #app {
   color: blue;
 }
