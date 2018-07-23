@@ -6,9 +6,7 @@ const webpack = require('webpack'),
 module.exports = {
   mode: 'development',
 
-  entry: {
-    main: './src/app.js'
-  },
+  entry: ['./src/app.js'],
 
   output: {
     filename: '[name].js',
