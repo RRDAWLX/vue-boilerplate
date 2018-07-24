@@ -23,6 +23,10 @@ export default {
     ...mapGetters([
       'count',
     ])
+  },
+
+  created() {
+    console.log('created1')
   }
 }
 </script>
