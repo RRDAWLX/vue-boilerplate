@@ -29,6 +29,9 @@ console.log(msgs.serverStarting)
 app.use(proxy((pathname, req) => {
   // console.log(req)
   // 在这里决定是否要代理请求
+  if (/api-test/.test(pathname)) {
+    return true
+  }
   return false
 }, {
   target: 'http://localhost:5000',

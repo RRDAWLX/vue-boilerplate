@@ -14,6 +14,14 @@ export default {
     return {
       head: 'My Vue App'
     }
+  },
+
+  created() {
+    fetch('/api-test', {
+      method: 'GET'
+    }).then(response => {
+      console.log(response)
+    })
   }
 }
 </script>
