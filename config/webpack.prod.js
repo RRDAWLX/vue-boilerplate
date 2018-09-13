@@ -15,7 +15,7 @@ module.exports = {
   },
 
   output: {
-    filename: '[name].[chunkhash:6].js',
+    filename: 'js/[name].[chunkhash:6].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/'
   },
@@ -50,7 +50,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[hash:6].[ext]'
+              name: 'image/[name].[hash:6].[ext]'
               // outputPath: 'images/'  // 用于将图片打包至指定目录，已被发布到单独的图片域
               // publicPath: 'https://mjrhd.vipstatic.com/'   // 用于指定图片资源发布路径
             }
@@ -87,7 +87,7 @@ module.exports = {
     new VueLoaderPlugin(),
 
     new MiniCssExtractPlugin({
-      filename: '[name].[chunkhash:6].css',
+      filename: 'css/[name].[chunkhash:6].css',
     }),
 
     // 生成一个HTML文件

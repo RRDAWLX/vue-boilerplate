@@ -9,7 +9,7 @@ module.exports = {
   entry: ['./src/app.js'],
 
   output: {
-    filename: '[name].js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/'
   },
@@ -44,7 +44,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]'
+              name: 'image/[name].[ext]'
             }
           },
         ]
