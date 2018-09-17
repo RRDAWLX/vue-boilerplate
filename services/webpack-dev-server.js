@@ -12,7 +12,8 @@ const options = {
     warnings: true,
     errors: true
   },
-  hot: true   // 开启模块热替换
+  hot: true,   // 开启模块热替换
+  quiet: true
 }
 
 webpackDevServer.addDevServerEntrypoints(config, options)

@@ -1,7 +1,8 @@
 const webpack = require('webpack'),
   path = require('path'),
   VueLoaderPlugin = require('vue-loader/lib/plugin'),
-  HtmlWebpackPlugin = require('html-webpack-plugin')
+  HtmlWebpackPlugin = require('html-webpack-plugin'),
+  FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -62,7 +63,9 @@ module.exports = {
     // 生成一个HTML文件
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+
+    new FriendlyErrorsWebpackPlugin(),
   ],
 
   resolve: {

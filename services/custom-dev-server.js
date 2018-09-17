@@ -44,13 +44,14 @@ app.use(require('connect-history-api-fallback')())
 // https://github.com/webpack/webpack-dev-middleware
 app.use(require('webpack-dev-middleware')(compiler, {
   publicPath: webpackDevConfig.output.publicPath,
-  logLevel: 'warn'
+  logLevel: 'silent'
 }))
 
 // https://github.com/webpack-contrib/webpack-hot-middleware
 app.use(require('webpack-hot-middleware')(compiler, {
   path: '/__webpack_hmr',
-  heartbeat: 10000
+  heartbeat: 10000,
+  log: false
 }))
 
 compiler.hooks.done.tap('done', () => {

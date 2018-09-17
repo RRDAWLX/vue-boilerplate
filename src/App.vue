@@ -31,4 +31,3 @@ export default {
   color: blue;
 }
 </style>
-
