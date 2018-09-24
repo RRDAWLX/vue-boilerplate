@@ -8,6 +8,7 @@
     "start": "npm run custom-dev-server",
     "custom-dev-server": "cross-env NODE_ENV=development node ./services/custom-dev-server.js",
     "webpack-dev-server": "cross-env NODE_ENV=development node ./services/webpack-dev-server.js",
+    "mock": "mock --port=5000 --base-dir=./mock-files",
     "build-dev": "cross-env NODE_ENV=development webpack --config ./config/webpack.dev.js",
     "build-prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js"
   },
@@ -34,6 +35,7 @@
     "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
+    "@rrdawlx/mock-server": "^1.0.0",
     "autoprefixer": "^9.0.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

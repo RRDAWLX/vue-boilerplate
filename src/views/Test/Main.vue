@@ -1,7 +1,7 @@
 <template>
   <div class="test">
     <p>vue test</p>
-    <p>count: {{ count }}</p>
+    <p>count: {{ doubleTestCount }}</p>
     <div>
       <img src="../../assets/test/large.png" />
       <p>large image</p>
@@ -20,8 +20,8 @@ export default {
   name: 'test',
 
   computed: {
-    ...mapGetters([
-      'count',
+    ...mapGetters('test', [
+      'doubleTestCount',
     ])
   },
 
