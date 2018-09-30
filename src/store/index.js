@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import user from './modules/user'
-import test from '../views/Test/store'
+import test from '../views/test/store'
+import viewName from '../views/view-name/store'
 
 Vue.use(Vuex)
 
@@ -21,7 +22,8 @@ const store = new Vuex.Store({
 
   modules: {
     user,
-    test
+    test,
+    viewName
   }
 })
 

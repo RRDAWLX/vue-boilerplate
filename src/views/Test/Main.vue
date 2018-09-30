@@ -3,11 +3,11 @@
     <p>vue test</p>
     <p>count: {{ doubleTestCount }}</p>
     <div>
-      <img src="../../assets/test/large.png" />
+      <img src="./assets/large.png" />
       <p>large image</p>
     </div>
     <div>
-      <img src="../../assets/test/small.png" />
+      <img src="./assets/small.png" />
       <p>small image</p>
     </div>
   </div>
@@ -42,4 +42,3 @@ export default {
   }
 }
 </style>
-

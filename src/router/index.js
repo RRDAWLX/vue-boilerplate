@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import routeA from './routes/a'
 
 Vue.use(Router)
 
 const routes = [
   {
     path: '/test',
-    component: () => import('../views/Test/Main')
-  }
+    component: () => import('../views/test/Main')
+  },
+  ...routeA
 ]
 
 const router = new Router({
