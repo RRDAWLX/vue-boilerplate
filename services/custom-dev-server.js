@@ -1,5 +1,4 @@
 const express = require('express'),
-  http = require('http'),
   https = require('https'),
   path = require('path'),
   fs = require('fs'),
@@ -26,7 +25,7 @@ console.log(msgs.serverStarting)
 
 // https://github.com/chimurai/http-proxy-middleware
 // api proxy
-app.use(proxy((pathname, req) => {
+app.use(proxy((pathname) => {
   // console.log(req)
   // 在这里决定是否要代理请求
   if (/api-test/.test(pathname)) {
@@ -59,4 +58,4 @@ compiler.hooks.done.tap('done', () => {
 })
 
 // https
-const server = https.createServer(credentials, app).listen(port)
+https.createServer(credentials, app).listen(port)

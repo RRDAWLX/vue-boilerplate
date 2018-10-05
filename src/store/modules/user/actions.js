@@ -1,7 +1,7 @@
 export default {
   fetchUserInfo({ commit }) {
     setTimeout(() => {
-      commit(updateUserInfo, {
+      commit('updateUserInfo', {
         userName: 'rrdawlx',
         userId: '99999'
       })

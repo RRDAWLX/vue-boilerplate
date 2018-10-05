@@ -1,11 +1,10 @@
-const webpack = require('webpack'),
-  path = require('path'),
+const path = require('path'),
   VueLoaderPlugin = require('vue-loader/lib/plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   CleanWebpackPlugin = require('clean-webpack-plugin'),
-  MiniCssExtractPlugin = require("mini-css-extract-plugin"),
-  UglifyJsPlugin = require("uglifyjs-webpack-plugin"),
-  OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
+  MiniCssExtractPlugin = require('mini-css-extract-plugin'),
+  UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
+  OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = {
   mode: 'production',

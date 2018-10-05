@@ -1,6 +1,6 @@
 {
   "name": "vue-boilerplate",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "vue boilerplate",
   "private": true,
   "scripts": {
@@ -11,7 +11,8 @@
     "mock": "mock --port=5000 --base-dir=./mock-files",
     "build-dev": "cross-env NODE_ENV=development webpack --config ./config/webpack.dev.js",
     "build-prod": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.js",
-    "check-version": "node ./services/check-version.js"
+    "check-version": "node ./services/check-version.js",
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "pre-commit": [
     "check-version"
@@ -42,6 +43,7 @@
     "@rrdawlx/mock-server": "^1.0.0",
     "autoprefixer": "^9.0.1",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^7.1.5",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-preset-env": "^1.7.0",
@@ -51,6 +53,8 @@
     "connect-history-api-fallback": "^1.5.0",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
+    "eslint": "^5.6.1",
+    "eslint-plugin-html": "^4.0.6",
     "express": "^4.16.3",
     "file-loader": "^1.1.11",
     "friendly-errors-webpack-plugin": "^1.7.0",

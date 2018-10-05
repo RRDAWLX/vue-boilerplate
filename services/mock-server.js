@@ -1,5 +1,4 @@
 const express = require('express'),
-  fs = require('fs'),
   parse = require('url').parse,
   path = require('path')
 
@@ -7,7 +6,7 @@ const port = 5000,
   contentBase = path.join(__dirname, '../mock-files'),
   app = new express()
 
-app.use(function (req, res, next) {
+app.use(function (req, res) {
   console.log(req.path)
 
   let modulePath = path.join(contentBase, parse(req.url).pathname + '.js')
