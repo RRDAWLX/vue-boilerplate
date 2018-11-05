@@ -28,7 +28,7 @@ console.log(msgs.serverStarting)
 app.use(proxy((pathname) => {
   // console.log(req)
   // 在这里决定是否要代理请求
-  if (/api-test/.test(pathname)) {
+  if (/api/.test(pathname)) {
     return true
   }
   return false

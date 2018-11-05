@@ -17,7 +17,7 @@ export default {
   },
 
   created() {
-    fetch('/api-test', {
+    fetch('/api/test', {
       method: 'GET'
     }).then(response => {
       console.log(response)
