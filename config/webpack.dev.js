@@ -72,6 +72,8 @@ module.exports = {
     extensions: ['.vue', '.js']
   },
 
+  devtool: 'eval-source-map',
+
   optimization: {
     splitChunks: {
       cacheGroups: {
