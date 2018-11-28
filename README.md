@@ -1,5 +1,7 @@
-# 结构
-## 顶层结构
+# vue-boilerplate
+
+## 结构
+### 顶层结构
 ```
 vue-boilerplate
 ├── ca  // https 证书
@@ -8,8 +10,8 @@ vue-boilerplate
 ├── services    // dev-server 等服务
 └── src     // 项目代码
 ```
-## src 文件夹内部结构
-### 一个仓库只包含一个项目
+### src 文件夹内部结构
+#### 一个仓库只包含一个项目
 ```
 src     // 项目代码
 ├── app.js    // 项目入口
@@ -41,8 +43,8 @@ src     // 项目代码
         └── common  // 如果视图私有的工具和公共组件很多，可以增加一个 common 文件夹来管理
 
 ```
-### 一个仓库只包含多个项目
-#### 方案一
+#### 一个仓库只包含多个项目
+##### 方案一
 ```
 src     // 项目代码
 ├── app.js    // 项目入口
@@ -89,7 +91,7 @@ src     // 项目代码
             ├── store   // 视图数据模块
             └── common  // 如果视图私有的工具和公共组件很多，可以增加一个 common 文件夹来管理
 ```
-#### 方案二
+##### 方案二
 ```
 src     // 项目代码
 ├── app.js    // 项目入口
@@ -135,7 +137,65 @@ src     // 项目代码
             ├── store   // 视图数据模块
             └── common  // 如果视图私有的工具和公共组件很多，可以增加一个 common 文件夹来管理
 ```
-# vue-boilerplate
+
+## 规范约定
+
+### 1、命名约定
+- 文件及文件夹命名统一使用中划线： **kebab-case.js**、**kebab-case-folder**
+- 变量命名统一使用驼峰式： **camelCase**
+- 组件名统一使用帕斯卡式： **PascalCase.vue**
+- 组件的 name 属性：**component-name**
+- \<template\>中的组件标签名使用中划线：**\<component-name\>**
+- 组件文件夹下的主组件统一命名为 **Main.vue**
+
+### 2、目录规范
+- 一个视图（View）或者页面（page）对应一个视图文件夹。例如：
+```
+jrcoupon\mobile\views\view-folder
+```
+
+- 如果一个域（如活动域）中有多个项目，每个项目有多个页面，则需加一层项目目录，一个项目对应一个文件夹，放在 views 文件夹下面，视图文件夹放在项目文件夹下面。例如：
+```
+activity\mobile\views\project-folder\view-folder
+```
+
+- 每个视图文件夹下有一个主组件文件 Main.vue。例如：
+```
+jrcoupon\mobile\views\view-folder\Main.vue
+activity\mobile\views\project-folder\view-folder\Main.vue
+```
+
+- 所有视图私有的组件，放在视图文件夹中。例如：
+```
+jrcoupon\mobile\views\view-folder\PrivateComponent.vue
+activity\mobile\views\project-folder\view-folder\PrivateComponent.vue
+```
+
+- 域内公用组件，放在域公用组件文件夹 components 中。例如：
+```
+jrcoupon\mobile\components\ProjectPublicComponent.vue
+```
+
+- 全站公用组件，放在全站公用组件文件夹 components 中。例如：
+```
+common\components\PublicComponent.vue
+```
+
+- 针对活动域这种有多个项目的域，如果单个项目中的多个页面有公用组件，可视情况决定是否将组件放在项目文件夹中。例如：
+```
+activity\mobile\views\project-folder\PublicComponent.vue
+```
+
+### 3、编码规范
+- 代码缩进统一使用2个空格
+- 代码行末尾不加分号
+- import 文件名称要与该文件的命名一置，例如：
+```
+import user from user.js
+import User from User.js
+import userNames from user-names.js
+import Component from Component.vue
+```
 
 ## hot module replacement references:  
 ### webpack:  
