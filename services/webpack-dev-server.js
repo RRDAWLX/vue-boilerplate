@@ -5,6 +5,7 @@ const webpack = require('webpack'),
 
 const options = {
   contentBase: '../dist',
+  index: '',
   host: 'localhost',
   port: 8081,
   historyApiFallback: true,   // 支持单页应用，用 index.html 响应 404 请求，不会响应被代理的请求。
@@ -12,12 +13,12 @@ const options = {
     '/': {
       target: 'http://localhost:5000',
       bypass: req => {
+        console.log(`path: ${req.path}`)
         // 需要代理的请求无需返回任何值
-        // 不需要代理的请求返回 false 或者响应请求的内容的路径
-        if (/^\/api\//.test(req.path)) {
-          return
+        // 不需要代理的返回请求路径
+        if (!/^\/api\//.test(req.path)) {
+          return req.path
         }
-        return false
       },
       pathRewrite: {'^/api': ''},
       router: req => {
